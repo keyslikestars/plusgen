@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Document</title>
+   <link rel="stylesheet" href="css/style.css" />
+   <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
+</head>
+<body>
+   <div class="container">
+      <div class="menucontainer">
+         <div class="logo">
+            <img src="images/logo.png" alt="">
+         </div>
+         <div class="mobileicon">
+            <i class="fa-solid fa-bars"></i>
+         </div>
+         <div class="menu">
+            <ul>
+               <li><a href="">Home</a></li>
+               <li><a href="">About</a></li>
+               <li><a href="">Services</a></li>
+               <li><a href="">Contact</a></li>
+               <li><a href="">Login</a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   
+   
+   </body>
+</html>
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+/* Global Style */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+    
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+    
+@font-face {
+    font-family: 'RobotoMedium';
+    src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+}
+    
+@font-face {
+    font-family: 'RobotoLight';
+    src: url('../fonts/Roboto-Light.ttf') format('truetype');
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;/* regular */
+}
+
+/* Global Variable 
+Local Variable */
+
+/* Create a Variable in css */
+/* Global Variable */
+:root {
+    --titleColor : Blue;
+    --titleFamily : 'RobotoMedium';
+    --contentFamily : 'RobotoRegular';
+    --otherFamily : 'RobotoLight';
+}
+
+h1 {
+    --titleColor : red; /* local Variable */
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--titleColor);
+    font-family: var(--titleFamily);
+}
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--titleColor);
+    font-family: var(--titleFamily);
+}
+h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--titleColor);
+    font-family: var(--titleFamily);
+}
+
+p {
+    font-family: var(--contentFamily);
+}
+
+a {
+    font-family: var(--titleFamily);
+}
+
+.mobileicon {
+    display: none;
+}
+
+.container {
+    /* width: 1200px; */
+    max-width: 1200px;
+    /* border: 2px solid red; */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 15px;
+}
+
+.menucontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu ul {
+    list-style-type: none;
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size:  1.5rem;
+    color: darkmagenta;
+}
+
+@media all and (min-width: 576px) {
+    .menu ul li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    .menu ul li:last-child {
+        margin-right: 0;
+    }
+}
+
+
+
+@media all and (max-width : 576px) {
+    .menu {
+        display: block;
+        flex-basis: 100%;
+    }
+    .mobileicon {
+        display: block;
+    }
+    .menu ul li a {
+        padding: 10px 12px;
+        display: block;
+        border-bottom: 1px solid #beb6b6;
+    }
+    /* .container {s
+        width: 100%;
+    } */
+    /* .menu ul li {
+        display: block;
+        margin-right: 0px;
+    } */
+}
+
+
+
+
+/* CSS Variables */
